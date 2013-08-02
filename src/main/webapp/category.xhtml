@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<h:outputStylesheet library="css" name="style1.css" />
+</h:head>
+<h:body>
+
+	<ui:composition template="WEB-INF/templates/template.xhtml">
+		<ui:define name="title">Select the category</ui:define>
+
+		<ui:define name="content">
+			<div style="width: 690px; margin: auto; margin-bottom: 30px;">
+
+				<h:form>
+
+					<h:dataTable value="#{menuItemBean.menuItemByCategoryId}"
+						var="menuItem" headerClass="tableMenuItemHeader"
+						rowClasses="standardRow">
+
+						<h:column>
+							<f:facet name="header">Dish</f:facet> 
+							#{menuItem.dishName} 
+							<h:commandButton value="Buy" styleClass="small_btn_buy"
+								action="#{orderBean.addToOrder}" rendered="#{userBean.getIsLogged()!=true}" >
+								<f:setPropertyActionListener target="#{orderBean.menuItemId}"
+									value="#{menuItem.id}" />
+								</h:commandButton>
+							<h:commandButton value="Delete" styleClass="small_btn"
+								action="#{menuItemBean.changeActual}" rendered="#{userBean.isLogged}">
+								<f:setPropertyActionListener target="#{menuItemBean.id}"
+									value="#{menuItem.id}" />
+							</h:commandButton>
+							<h:commandButton value="Edit" styleClass="small_btn"
+								action="edit_dish" rendered="#{userBean.isLogged}" >
+								<f:setPropertyActionListener target="#{menuItemBean.id}"
+									value="#{menuItem.id}" />
+							</h:commandButton>
+						</h:column>
+						<h:column>
+							<f:facet name="header">Price</f:facet> 
+			#{menuItem.price} </h:column>
+					</h:dataTable>
+
+
+				</h:form>
+			</div>
+		</ui:define>
+
+	</ui:composition>
+
+</h:body>
+</html>

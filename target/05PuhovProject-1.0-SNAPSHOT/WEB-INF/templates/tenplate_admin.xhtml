@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+  <title><ui:insert name="title">Welcome to our restaurant!</ui:insert></title>
+	<h:outputStylesheet library="css" name="style1.css" />
+</h:head>
+
+<h:body>
+
+<div class="main">
+<div id="header">
+    <ui:insert name="header">
+		<ui:include src= "header.xhtml" />
+		
+    </ui:insert>
+</div>
+
+<div class="content">
+<h1 style="border-bottom:2px dashed #cc6633;">Welcome to our italian restaurant</h1>
+		<div class="main_menu">
+		<h:form>
+		
+		<ul class="main_menu">
+			
+			<li><h:commandLink value="Dishes"
+                   action="dishes" /></li>
+			<li><h:commandLink value="Kitchen"
+                   action="kitchen" /></li>
+            <li><h:commandLink value="Orders"
+                   action="" /></li>
+            <li><h:commandLink value="Info"
+                   action="info" /></li>
+			<li><h:commandLink value="Log out"
+                   action="" /></li>
+                   
+		</ul>
+		</h:form>
+		</div>
+<div id="content">
+  <ui:insert name="content">
+		<ui:include src= "content.xhtml" />
+		
+		
+  </ui:insert>
+</div>
+
+<div id="footer">
+	<div class="footer">
+  <ui:insert name="footer">
+  		<ui:include src= "footer.xhtml" />	
+  </ui:insert>
+  	</div>
+</div>  
+</div>
+
+</div>
+
+</h:body>
+</html>

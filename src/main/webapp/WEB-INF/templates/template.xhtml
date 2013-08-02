@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+  <title><ui:insert name="title">Welcome to our restaurant!</ui:insert></title>
+	<h:outputStylesheet library="css" name="style1.css" />
+</h:head>
+
+<h:body>
+
+<div class="main">
+<div id="header">
+    <ui:insert name="header">
+		<ui:include src= "header.xhtml" />
+		
+    </ui:insert>
+</div>
+
+<div class="content">
+<h1 style="border-bottom:2px dashed #cc6633;">Welcome to our italian restaurant</h1>
+		<div class="main_menu">
+		<h:form>
+		
+		<ul class="main_menu">
+			<li><h:commandLink value="Menu"
+                   action="index" /></li>
+			<li><h:commandLink value="Add Dishes"
+                   action="add_dish" rendered="#{userBean.flagManager==true or userBean.flagAdmin==true}" /></li>
+			<li><h:commandLink value="Kitchen"
+                   action="kitchen" rendered="#{userBean.flagKitchen==true or userBean.flagAdmin==true}" /></li>
+            <li><h:commandLink value="Order" 
+                   action="order_page" rendered="#{userBean.getIsLogged()!=true}" /></li>
+            <li><h:commandLink value="Info" rendered="#{userBean.flagManager==true or userBean.flagAdmin==true}"
+                   action="info" /></li>
+            <li><a href="#{xmlBean.getXml()}">Get Dishes</a></li>
+			<li><h:commandLink value="Login"
+                   action="login" rendered="#{userBean.getIsLogged()!=true}"  /></li>
+            <li><h:commandLink value="Logout"
+                   action="#{userBean.logout()}" rendered="#{userBean.getIsLogged()!=false}"  /></li>       
+                   
+		</ul>
+		</h:form>
+		</div>
+<div id="content">
+  <ui:insert name="content">
+		<ui:include src= "content.xhtml" />
+		
+		
+  </ui:insert>
+</div>
+
+<div id="footer">
+	<div class="footer">
+  <ui:insert name="footer">
+  		<ui:include src= "footer.xhtml" />	
+  </ui:insert>
+  	</div>
+</div>  
+</div>
+
+</div>
+
+</h:body>
+
+</html>

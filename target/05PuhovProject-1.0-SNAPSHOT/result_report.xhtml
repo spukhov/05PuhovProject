@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templates/template.xhtml">
+
+	<ui:define name="content">
+	    
+
+		<h:dataTable value="#{reportBean.getReportList()}" var="res" style="background:#dddddd;width:250px; padding: 20px; border-radius:10px;text-align:center;"> 
+		<h:column><f:facet name="header">Date</f:facet>
+			#{res.orderDateFormat}
+		</h:column>
+		<h:column> <f:facet name="header">Orders </f:facet>
+			#{res.orderCount}
+		 </h:column> 
+		 <h:column> <f:facet name="header">Total </f:facet>
+			#{res.orderTotalSum}
+		 </h:column> 
+		 <h:column> 
+				<f:facet name="header">Details</f:facet>
+				
+	 		   <h:dataTable value="#{reportBean.getDetailReportListByDay(res.orderDate)}" var="resCategory"  style="background:#dddddd;width:350px; padding: 20px; border-radius:10px;" styleClass="report_small"> 
+				<!-- <h:column>
+				#{resCategory.orderDateFormat}
+				</h:column> -->
+				<h:column >
+				#{resCategory.category.categoryName}
+				</h:column>
+				<h:column> 
+				#{resCategory.orderCount}
+				 </h:column> 
+				 <h:column> 
+					#{resCategory.orderTotalSum}
+				 </h:column> 
+
+
+				</h:dataTable> 
+		
+		 </h:column> 
+
+		</h:dataTable>
+	</ui:define>
+
+</ui:composition>
+</html>

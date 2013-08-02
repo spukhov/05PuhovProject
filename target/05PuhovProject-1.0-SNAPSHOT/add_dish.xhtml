@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templates/template.xhtml">
+
+	<ui:define name="content">
+		<h3>Adding dishes</h3>
+		<h:form>
+			<h:panelGrid columns="2"
+				style="background:#dddddd;width:250px; padding: 20px; border-radius:10px;">
+				<h:outputText value="Name"></h:outputText>
+				<h:inputText value="#{menuItemBean.dishName}"></h:inputText>
+
+				<h:outputText value="Price"></h:outputText>
+				<h:inputText value="#{menuItemBean.price}"></h:inputText>
+
+				<h:outputText value="Category"></h:outputText>
+				
+				<h:selectOneMenu value="#{menuItemBean.category}"
+					requiredMessage="Filed is required" required="true">
+					<f:selectItems value="#{categoryBean.categoriesForSelect}" />
+				</h:selectOneMenu>
+
+				<h:outputText value="Kitchen-Made"></h:outputText>
+				<h:selectOneRadio value="#{menuItemBean.kitchenMade}"
+					style="width:40px; text-align:center; float:left;">
+					<f:selectItem itemValue="1" itemLabel="Yes" />
+					<f:selectItem itemValue="0" itemLabel="No" />
+				</h:selectOneRadio>
+
+				<h:outputText value="Actuality"></h:outputText>
+				<h:selectOneRadio value="#{menuItemBean.actual}"
+					style="width:40px; text-align:center; float:left;">
+					<f:selectItem itemValue="1" itemLabel="Yes" />
+					<f:selectItem itemValue="0" itemLabel="No" />
+				</h:selectOneRadio>
+
+
+				<h:commandButton value="Confirm" action="#{menuItemBean.getNewMenuItem()}"
+					styleClass="smallbtn" ></h:commandButton>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

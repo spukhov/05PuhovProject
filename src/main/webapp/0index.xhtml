@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Exmaple 3.7</title>
+</h:head>
+<h:body>
+    <h3>Persons</h3>
+    <h:form>
+        <h:inputText value="#{personBean.name}"></h:inputText>
+        <h:commandButton action="#{personBean.createPerson}" value="Add"/>
+    </h:form>
+
+    <h:dataTable var="p" value="#{personBean.persons}">
+        <h:column>#{p.name}</h:column>
+    </h:dataTable>
+</h:body>
+</html>

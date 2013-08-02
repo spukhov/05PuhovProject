@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmlHelper>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_pizza.jpg</categoryImage>
+            <categoryName>Pizza</categoryName>
+            <id>1</id>
+        </category>
+        <dishName>Big Pepperoni Pizza</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>120.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_pizza.jpg</categoryImage>
+            <categoryName>Pizza</categoryName>
+            <id>1</id>
+        </category>
+        <dishName>Small Pepperoni Pizza</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>60.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_pizza.jpg</categoryImage>
+            <categoryName>Pizza</categoryName>
+            <id>1</id>
+        </category>
+        <dishName>Medium Vegetarian Pizza</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>80.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_pizza.jpg</categoryImage>
+            <categoryName>Pizza</categoryName>
+            <id>1</id>
+        </category>
+        <dishName>Medium Napolitana Pizza</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>95.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_pasta.jpg</categoryImage>
+            <categoryName>Pasta</categoryName>
+            <id>2</id>
+        </category>
+        <dishName>Pasta Carbonara</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>42.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_pasta.jpg</categoryImage>
+            <categoryName>Pasta</categoryName>
+            <id>2</id>
+        </category>
+        <dishName>Pasta Bolognese</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>36.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_pasta.jpg</categoryImage>
+            <categoryName>Pasta</categoryName>
+            <id>2</id>
+        </category>
+        <dishName>Pasta Chicken</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>28.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_meat.jpg</categoryImage>
+            <categoryName>Meat Dishes</categoryName>
+            <id>3</id>
+        </category>
+        <dishName>Steak</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>72.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_meat.jpg</categoryImage>
+            <categoryName>Meat Dishes</categoryName>
+            <id>3</id>
+        </category>
+        <dishName>Bourbon Chicken</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>56.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_meat.jpg</categoryImage>
+            <categoryName>Meat Dishes</categoryName>
+            <id>3</id>
+        </category>
+        <dishName>Surprising Scaloppine</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>58.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_side.jpg</categoryImage>
+            <categoryName>Side Dishes</categoryName>
+            <id>4</id>
+        </category>
+        <dishName>Potato Salad</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>18.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_side.jpg</categoryImage>
+            <categoryName>Side Dishes</categoryName>
+            <id>4</id>
+        </category>
+        <dishName>Panzanella Salad</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>26.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_side.jpg</categoryImage>
+            <categoryName>Side Dishes</categoryName>
+            <id>4</id>
+        </category>
+        <dishName>Caprese Salad</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>22.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_side.jpg</categoryImage>
+            <categoryName>Side Dishes</categoryName>
+            <id>4</id>
+        </category>
+        <dishName>Fried Potatoes</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>14.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_side.jpg</categoryImage>
+            <categoryName>Side Dishes</categoryName>
+            <id>4</id>
+        </category>
+        <dishName>Cheese Salad</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>22.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_dessert.jpg</categoryImage>
+            <categoryName>Desserts</categoryName>
+            <id>5</id>
+        </category>
+        <dishName>Chocolate Bar</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>14.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_dessert.jpg</categoryImage>
+            <categoryName>Desserts</categoryName>
+            <id>5</id>
+        </category>
+        <dishName>Tiramisu</dishName>
+        <kitchenMade>1</kitchenMade>
+        <price>20.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_dessert.jpg</categoryImage>
+            <categoryName>Desserts</categoryName>
+            <id>5</id>
+        </category>
+        <dishName>Gelato</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>24.0</price>
+    </menu>
+    <menu>
+        <actual>0</actual>
+        <category>
+            <categoryImage>resources/img/small_dessert.jpg</categoryImage>
+            <categoryName>Desserts</categoryName>
+            <id>5</id>
+        </category>
+        <dishName>Chocolate Cookies</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>12.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_drinks.jpg</categoryImage>
+            <categoryName>Drinks</categoryName>
+            <id>6</id>
+        </category>
+        <dishName>Red Wine</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>14.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_drinks.jpg</categoryImage>
+            <categoryName>Drinks</categoryName>
+            <id>6</id>
+        </category>
+        <dishName>White Wine</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>20.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_drinks.jpg</categoryImage>
+            <categoryName>Drinks</categoryName>
+            <id>6</id>
+        </category>
+        <dishName>Fiano</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>32.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_drinks.jpg</categoryImage>
+            <categoryName>Drinks</categoryName>
+            <id>6</id>
+        </category>
+        <dishName>Orange Juice</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>14.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_drinks.jpg</categoryImage>
+            <categoryName>Drinks</categoryName>
+            <id>6</id>
+        </category>
+        <dishName>Apple Juice</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>14.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_drinks.jpg</categoryImage>
+            <categoryName>Drinks</categoryName>
+            <id>6</id>
+        </category>
+        <dishName>Black Tea</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>7.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_drinks.jpg</categoryImage>
+            <categoryName>Drinks</categoryName>
+            <id>6</id>
+        </category>
+        <dishName>Cappuccino</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>9.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <dishName>7up 0.5</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>8.0</price>
+    </menu>
+    <menu>
+        <actual>1</actual>
+        <category>
+            <categoryImage>resources/img/small_drinks.jpg</categoryImage>
+            <categoryName>Drinks</categoryName>
+            <id>6</id>
+        </category>
+        <dishName>7up 0.5</dishName>
+        <kitchenMade>0</kitchenMade>
+        <price>8.0</price>
+    </menu>
+</xmlHelper>

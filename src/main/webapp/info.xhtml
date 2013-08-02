@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templates/template.xhtml">
+
+	<ui:define name="content">
+		<h:form styleClass="form-horizontal form" rendered="#{userBean.flagAdmin==true or userBean.flagManager==true}">
+			<h3 style="text-align: center;">Reports</h3>
+				 <h:panelGrid columns="3">
+				
+				
+					<h:outputLabel value="Start date" for="startDate" />
+					<h:inputText id="startDate" value="#{reportBean.startDate}"
+						required="true" requiredMessage="field should not be empty">
+						<f:convertDateTime pattern="dd.MM.yyyy" />
+					</h:inputText>
+					<h:message for="startDate" styleClass="error" />
+
+					<h:outputLabel value="End date" for="endDate" />
+					<h:inputText id="endDate" value="#{reportBean.endDate}"
+						required="true" requiredMessage="field should not be empty">
+						<f:convertDateTime pattern="dd.MM.yyyy" />
+					</h:inputText>
+					<h:message for="endDate" styleClass="error" />
+				</h:panelGrid>
+				<h:commandButton value="Get Report" action="result_report.xhtml"></h:commandButton> 
+			</h:form>
+		<h:form rendered="true">
+		
+			
+
+			<h3 style="text-align: center;">Users</h3>
+
+			<h:dataTable value="#{userBean.all}" var="users"
+				headerClass="tableMenuItemHeader" rowClasses="standardRow">
+				<h:column>
+					<f:facet name="header">Name</f:facet> 
+			#{users.userName} 
+		</h:column>
+				<h:column>
+					<f:facet name="header">Email</f:facet> 
+			#{users.email} 
+			</h:column>
+				<h:column rendered="#{userBean.flagAdmin==true}">
+					<f:facet name="header"></f:facet> 
+			
+			
+			<h:commandButton value="edit" styleClass="small_btn"
+						action="edit_user">
+						<f:setPropertyActionListener target="#{userBean.userId}"
+							value="#{users.id}" />
+					</h:commandButton>
+					<h:commandButton value="delete" styleClass="small_btn"
+						action="#{userBean.changeActual}" >
+						<f:setPropertyActionListener target="#{userBean.userId}"
+							value="#{users.id}" />
+						
+					</h:commandButton>
+				</h:column>
+
+			</h:dataTable>
+
+			<h:commandButton value="Create User" action="add_user.xhtml"></h:commandButton>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+</html>

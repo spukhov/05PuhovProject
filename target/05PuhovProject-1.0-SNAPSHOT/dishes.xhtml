@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templates/template.xhtml">
+
+	<ui:define name="content">
+	<h3>All Dishes</h3>
+	    <h:form>
+	    <h:outputText value="Filter dishes cheaper than: "></h:outputText>
+	    <h:inputText></h:inputText> <h:commandButton value="Filter" action="menuItemBean.filterItemsByPrice(100)"></h:commandButton>
+	    <br/>
+	    <h:dataTable value="#{menuItemBean.menuItemList}" var="menuItem" headerClass="tableMenuItemHeader" rowClasses="standardRow"> 
+		<h:column> <f:facet name="header">Dish</f:facet> 
+			#{menuItem.dishName} <h:commandButton value="Buy" styleClass="small_btn_buy" action="order_page"/>
+			<h:commandButton value="Delete" styleClass="small_btn" action="category_item"/>
+			<h:commandButton value="Edit" styleClass="small_btn" action="add_dish"/>
+		</h:column>
+		<h:column> <f:facet name="header">Price</f:facet> 
+			#{menuItem.price} </h:column> 
+		</h:dataTable>
+		
+		<h:commandButton value="Add Dish" action="add_dish"/>
+		
+	    </h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

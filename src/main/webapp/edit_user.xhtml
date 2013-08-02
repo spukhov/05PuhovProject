@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templates/template.xhtml">
+
+	<ui:define name="content">
+		<h3>Adding Users</h3>
+		<h:form>
+			<h:panelGrid columns="3"
+				style="background:#dddddd;width:250px; padding: 20px; border-radius:10px;">
+				<h:outputText value="Name"></h:outputText>
+				<h:inputText id="name" value="#{userBean.userName}" required="true"
+					validatorMessage="Length must be greater than '3' symbols"
+					requiredMessage="Filed is required">
+					<f:validateLength minimum="4" />
+				</h:inputText>
+				<h:message for="name" styleClass="error" />
+
+
+				<h:outputText value="Email"></h:outputText>
+				<h:inputText id="email" value="#{userBean.email}" required="true"
+					validatorMessage="Length must be greater than '3' symbols"
+					requiredMessage="Filed is required">
+					<f:validateLength minimum="4" />
+				</h:inputText>
+				<h:message for="email" styleClass="error" />
+
+				<h:outputText value="Password"></h:outputText>
+				<h:inputText id="password" value="#{userBean.password}"
+					required="true"
+					validatorMessage="Length must be greater than '3' symbols"
+					requiredMessage="Filed is required">
+					<f:validateLength minimum="4" />
+				</h:inputText>
+				<h:message for="password" styleClass="error" />
+
+				<h:outputText value="Administrator" />
+				<h:selectBooleanCheckbox value="#{userBean.flagAdmin}" />
+				<h:inputHidden />
+
+				<h:outputText value="Manager" />
+				<h:selectBooleanCheckbox value="#{userBean.flagManager}" />
+				<h:inputHidden />
+
+				<h:outputText value="Kitchen Worker" />
+				<h:selectBooleanCheckbox value="#{userBean.flagKitchen}" />
+				<h:inputHidden />
+
+
+				<h:commandButton value="Confirm" action="#{userBean.getEditUser}"></h:commandButton>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
+</html>

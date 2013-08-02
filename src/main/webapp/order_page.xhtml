@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="WEB-INF/templates/template.xhtml">
+
+	<ui:define name="content">
+	<h3>Order Page</h3>
+		<h:form>
+	    <h:dataTable value="#{orderBean.menuItemList}" var="menuItem" headerClass="tableMenuItemHeader" rowClasses="stadardRow" style="border-bottom:2px dashed #cc6633;"> 
+		<h:column> <f:facet name="header">Dish</f:facet>
+			#{menuItem.dishName}
+			<h:commandButton styleClass="small_btn" action="#{orderBean.removeFromOrder(menuItem.id)}" value="remove" />
+			
+		</h:column>
+		<h:column> <f:facet name="header">Price</f:facet> 
+			#{menuItem.price} 	
+		</h:column>
+		
+		</h:dataTable>
+		Order total: #{orderBean.orderSum()}
+		
+		</h:form>
+			
+		
+		<h:form>
+		<h:panelGrid columns="3"
+			style="background:#dddddd;width:250px; padding: 20px; border-radius:10px;margin-top:20px;">
+			<h:outputText value="Name"></h:outputText>
+			<h:inputText id="name" value="#{orderBean.clientName}" required="true"
+				validatorMessage="Length must be greater than '3' symbols"
+				requiredMessage="Filed is required">
+				<f:validateLength minimum="4" />
+			</h:inputText>
+			<h:message for="name" styleClass="error" />
+
+
+			<h:outputText value="Phone"></h:outputText>
+			<h:inputText id="phone" value="#{orderBean.phoneNumber}" required="true"
+				validatorMessage="Length must be greater than '6' symbols"
+				requiredMessage="Filed is required" >
+				<f:validateLength minimum="7" />
+			</h:inputText>
+			<h:message for="phone" styleClass="error" />
+			
+
+			<h:commandButton value="Confirm" action="result_save_order.xhtml"  ></h:commandButton>
+		</h:panelGrid>
+	
+		</h:form>
+		
+	</ui:define>
+
+</ui:composition>
+</html>
